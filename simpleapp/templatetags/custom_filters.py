@@ -16,7 +16,7 @@ def multiply(value, arg):
 @register.filter(name='Censor')
 def Censor(value):
 	if isinstance(value, str):
-		a = ['ху', 'пизд', 'нах', 'жоп', 'ебл']
+		a = ['ху', 'пизд', 'нах', 'жоп', 'ебл', 'бля']
 		for i in a:
 			value = re.sub(f'{i}', '♥♥', value)
 	return value
