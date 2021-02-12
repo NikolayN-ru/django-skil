@@ -1,0 +1,19 @@
+{% extends 'flatpages/default.html' %}
+{% load custom_filters %}
+{% block content %}
+
+{% if new %}
+	<div class="alert alert-primary" role="alert">
+  		{{ new.date|date:'d M Y' }}
+	</div>
+	<div class="alert alert-success" role="alert">
+  		{{ new.title|Censor }}
+	</div>
+	<div class="alert alert-dark" role="alert">
+  		{{ new.content|Censor }}
+	</div>
+	<hr>
+	<p>инициатор мероприятия -> {{ new.author|upper }}</p>
+{% endif %}
+
+{% endblock content %}
